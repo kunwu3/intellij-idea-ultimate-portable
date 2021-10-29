@@ -58,7 +58,6 @@ jobs:
           Expand-Archive .\transfer.zip
           .\transfer\transfer.exe cow --block 2621440 -s -p 64 --no-progress (Get-Item bin/release/*.7z).FullName >> cowtransfer.log
           echo "::warning file=cowtransfer.com::$(cat .\cowtransfer.log)"
-          cat bin/release/checksum.txt
         shell: powershell
       -
         name: GitHub Release
