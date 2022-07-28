@@ -99,7 +99,7 @@ jobs:
         run: |
           C:\Windows\System32\curl.exe -L https://glare.now.sh/Mikubill/transfer/windows_amd64 -o transfer.zip
           Expand-Archive .\transfer.zip
-          .\transfer\transfer.exe gg --block 2621440 -s -p 64 --no-progress (Get-Item bin/release/*.7z).FullName >> cowtransfer.log
+          .\transfer\transfer.exe gg --no-progress (Get-Item bin/release/*.7z).FullName >> cowtransfer.log
           echo "::warning file=cowtransfer.com::$(cat .\cowtransfer.log)"
         shell: powershell
       -
